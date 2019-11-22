@@ -12,6 +12,8 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import { createAppContainer, NavigationScreenProp } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
+import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 
 type Props = {
   navigation: NavigationScreenProp<{}>;
@@ -22,6 +24,8 @@ class HomeScreen extends React.Component<Props> {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Home Screen</Text>
+        <FontAwesomeIcon name="rocket" size={30} color="#900" />
+        <MaterialIcon name="more-vert" size={20} />
         <Button
           title="Go to Details"
           onPress={() => this.props.navigation.navigate("Details")}
